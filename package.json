@@ -1,0 +1,18 @@
+{
+  "name": "rtoontown-css-theme",
+  "description": "A Toontown Online inspired CSS theme for /r/Toontown on reddit.",
+  "version": "0.1.0",
+  "author": "Joey Ziolkowski",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+      "start": "sass --style=compressed --no-source-map --watch scss/rToontown.scss rToontown.min.css"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/JoeyZio/rToontown-CSS-Theme.git"
+  },
+  "dependencies": {
+    "sass": "^1.27.1"
+  }
+}
