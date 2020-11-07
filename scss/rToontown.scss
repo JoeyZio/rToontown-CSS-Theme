@@ -50,7 +50,7 @@ body:not(.search-page) .morelink{top:540px}
  */
 
 html {
-    min-width: 1700px;
+    min-width: 800px;
     overflow: auto;
 }
 
@@ -58,7 +58,15 @@ body {
     background: $body-background url(%%footer%%) no-repeat scroll top center;
     background-size: 75%;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0 128px;
+    padding: 0 32px;
+
+    @media (min-width: $breakpoint-medium) {
+        padding: 0 64px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        padding: 0 128px;
+    }
 }
 
 a {
@@ -130,6 +138,10 @@ select {
     margin: 1px 1px 0;
     padding: 10px 16px 11px !important;
     text-transform: capitalize;
+
+    @media (max-width: $breakpoint-medium) {
+        display: none;
+    }
 }
 
 #header .tabmenu li.selected a, #header .tabmenu li a:hover {
@@ -191,6 +203,10 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     line-height: 48px;
     text-decoration: none;
     transition: unset !important;
+
+    @media (max-width: $breakpoint-medium) {
+        display: none;
+    }
 }
 
 #sr-header-area .separator {
