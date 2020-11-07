@@ -1,8 +1,12 @@
 /*!
- * /r/Toontown CSS Theme 0.1.0
- * Author: Joey Ziolkowski
+ * /r/Toontown CSS Theme
+ *
+ * Version: 0.1.0
  * Last Modified: 10/29/2020
+ * Author: Joey Ziolkowski
  */
+
+@import 'variables';
 
 /*
  * ADDONS
@@ -51,14 +55,14 @@ html {
 }
 
 body {
-    background: #2b7ed0 url(%%footer%%) no-repeat scroll top center;
+    background: $body-background url(%%footer%%) no-repeat scroll top center;
     background-size: 75%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 128px;
 }
 
 a {
-    color: #3273dc;
+    color: $link-color;
     transition: unset;
 }
 
@@ -129,7 +133,7 @@ select {
 }
 
 #header .tabmenu li.selected a, #header .tabmenu li a:hover {
-    background: linear-gradient(#fded82, #fddb27);
+    background: $button-background;
     border-bottom: 0;
     color: #fff;
 }
@@ -194,15 +198,16 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 }
 
 #sr-header-area .sr-bar a:hover, #sr-more-link:hover, #sr-header-area .dropdown.srdrop .selected:hover {
-    background: #148ec7;
+    background: $header-background-hover;
 }
 
-.morelink, .create .morelink, .c-btn-primary, .wiki-page .wiki-page-content .wiki_button, body .btn, body button, .account-activity-box a {
-    background: linear-gradient(#fde74e, #ffd900);
-    border: 3px solid #ffd900;
-    border-radius: 50px;
-    box-shadow: 0 3px #b2b2b2 !important;
-    color: #2178fd;
+.morelink, .create .morelink, .c-btn-primary, .wiki-page .wiki-page-content .wiki_button, body .btn, .account-activity-box a {
+    background: $button-background;
+    border: $button-border;
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
+    box-shadow: $button-shadow !important;
+    color: $button-text-color;
     font-weight: bold;
     line-height: 32px;
     transition: unset;
@@ -211,13 +216,13 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 }
 
 .morelink:hover, .btn:hover, .c-btn-primary:hover, .wiki-page .wiki-page-content .wiki_button, button:hover, .account-activity-box a:hover {
-    background: linear-gradient(#f9b10a, #f17e00);
-    border-color: #ffd900;
-    color: #fff;
+    background: $button-background-hover;
+    border-color: $button-border-color;
+    color: $button-text-color-hover;
 }
 
 .morelink a {
-    color: #2178fd !important;
+    color: $button-text-color !important;
     font-weight: bold;
 }
 
@@ -292,7 +297,7 @@ body:not(.search-page) .morelink {
 }
 
 #search #searchexpando {
-    background: linear-gradient(#fde74e, #ffd900);
+    background: $button-background;
     box-shadow: 5px 5px #b2b2b2, -1px -1px #b2b2b2 !important;
     border-radius: 15px;
     height: auto;
@@ -303,7 +308,7 @@ body:not(.search-page) .morelink {
 }
 
 .res #search #searchexpando label {
-    color: #2178fd;
+    color: $button-text-color;
     font-weight: bold;
     padding: 0;
 }
@@ -405,7 +410,7 @@ div.titlebox span.number:after {
 }
 
 .footer-parent {
-    background: #2b7ed0 url(%%footer%%) no-repeat scroll top center;
+    background: $body-background url(%%footer%%) no-repeat scroll top center;
     background-size: 75%;
 }
 

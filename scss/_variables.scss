@@ -1,0 +1,26 @@
+/*
+ * /r/Toontown CSS Theme - Variables
+ *
+ * Author: Joey Ziolkowski
+ * Last Modified: 10/29/2020
+ */
+
+// Body
+$body-background: #2b7ed0;
+
+// Header
+$header-background: #015bb4;
+$header-background-hover: #148ec7;
+
+// Links
+$link-color: #2178fd;
+
+// Buttons
+$button-text-color: $link-color;
+$button-text-color-hover: #fff;
+$button-background: linear-gradient(#fde74e, #ffd900);
+$button-background-hover: linear-gradient(#f9b10a, #f17e00);
+$button-border: 3px solid;
+$button-border-color: #ffd900;
+$button-border-radius: 50px;
+$button-shadow: 0 3px #b2b2b2;
