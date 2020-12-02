@@ -124,7 +124,7 @@ select {
     right: -250px;
 }
 
-#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
+#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before, .account-activity-box:before {
     color: #fff;
     font-weight: bold;
     text-shadow: 3px 3px 0 #1d1d1d, 3px 2px 0 #1d1d1d, 3px 1px 0 #1d1d1d, 3px 0px 0 #1d1d1d, 2px 3px 0 #1d1d1d, 1px 3px 0 #1d1d1d, 0px 3px 0 #1d1d1d, -1px -1px 0 #1d1d1d, -1px 0px 0 #1d1d1d, 0px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, -1px 1px 0 #1d1d1d;
@@ -167,7 +167,7 @@ body[class]>.content, body.listing-page[class]>.content {
     padding: 145px 384px 64px 32px;
 }
 
-body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .link, .commentarea>.sitetable>.comment, #bottom-comments:not(.child)>.sitetable>.comment, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .side .sidecontentbox, .account-activity-box, .side .titlebox, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-result-subreddit, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before {
+body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .link, .commentarea>.sitetable>.comment, #bottom-comments:not(.child)>.sitetable>.comment, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .account-activity-box, .side .sidecontentbox, .side .titlebox, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-result-subreddit, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before {
     border-radius: 10px;
     border: 2px solid #D4D4D4;
     background: #FFF;
@@ -262,32 +262,53 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     content: unset;
 }
 
-.side {
-    margin: 282px 32px 108px 0;
-}
-
 .side:before {
     display: none;
 }
 
-.side .spacer {
-    margin: 0 0 50px;
+.side {
+    margin: 282px 32px 108px 0;
+
+    &:before {
+        display: none;
+    }
+
+    &:after {
+        content: "Subreddit CSS Theme created by /u/JoeyZio. Powered by /r/Naut. Contribute on GitHub!";
+        border: 0;
+        color: #292f34;
+        font: 13px/1.45 Lato,Arial,sans-serif;
+        margin-top: -120px;
+        padding: 16px;
+    }
+
+    .spacer {
+        margin: 0;
+
+        > *:first-child {
+            margin: 0 0 50px;
+        }
+
+        &:nth-child(-n+3) > *:first-child {
+            margin: 0;
+        }
+    }
+
+    .premium-banner-outer {
+        margin-top: 15px;
+    }
+
+    .titlebox h1.redditname {
+        z-index: 1;
+
+        a {
+            display: none;
+        }
+    }
 }
 
-.side .spacer:nth-child(-n+3) {
-    margin: 0;
-}
-
-.side .premium-banner-outer {
-    margin-top: 15px;
-}
-
-.side .titlebox h1.redditname {
+.titlebox h1.redditname {
     z-index: 1;
-}
-
-.side .titlebox h1.redditname a {
-    display: none;
 }
 
 .side .titlebox h1.redditname:before {
@@ -388,13 +409,13 @@ div.titlebox span.number:after {
 
 .titlebox {
     margin-top: 50px;
-}
 
-.titlebox:before {
-    content: 'Toon HQ';
-    font-size: 24px;
-    margin: -50px -20px;
-    position: absolute;
+    &:before {
+        content: 'Toon HQ';
+        font-size: 24px;
+        margin: -50px -20px;
+        position: absolute;
+    }
 }
 
 .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
@@ -411,18 +432,61 @@ div.titlebox span.number:after {
     display: none;
 }
 
-.sidecontentbox .message-button:before {
-    content: 'Toon Council';
-    margin: -65px -70px;
+.sidecontentbox {
+
+    .more {
+        margin-bottom: 50px;
+    }
+
+    .message-button {
+        padding: unset;
+
+        &:before {
+            content: 'Toon Council';
+            margin: -62px -162px;
+        }
+
+        a {
+            margin: 100px 0 0 -144px;
+            position: absolute;
+            width: 288px;
+        }
+    }
+
+    .gadget:before {
+        content: 'Recently Viewed';
+        margin: -60px -20px;
+    }
+
+    .title h1 {
+        display: none;
+    }
 }
 
-.sidecontentbox .gadget:before {
-    content: 'Recently Viewed';
-    margin: -60px -20px;
+.sidebox.create {
+    height: 0;
+    margin: unset !important;
+
+    .morelink {
+        top: 298px !important;
+        margin: 16px;
+    }
 }
 
-.sidecontentbox .title h1 {
-    display: none;
+.account-activity-box {
+    height: 175px;
+
+    &:before {
+        content: 'About';
+        font-size: 24px;
+        margin: -50px -20px;
+        position: absolute;
+    }
+
+    a {
+        display: block;
+        font-size: 14px;
+    }
 }
 
 .footer-parent {
