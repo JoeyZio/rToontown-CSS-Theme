@@ -2,8 +2,8 @@
  * /r/Toontown CSS Theme
  *
  * Version: 0.1.0
- * Last Modified: 10/29/2020
- * Author: Joey Ziolkowski
+ * Last Modified: 07/28/2026
+ * Author: Joey Ziolkowski, Alexander Turner
  */
 
 @import 'variables';
@@ -199,7 +199,6 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 
 #sr-header-area .sr-bar a, #sr-more-link, #sr-header-area .dropdown.srdrop .selected {
     color: #fff !important;
-    padding: 18px 9px 19px;
     line-height: 48px;
     text-decoration: none;
     transition: unset !important;
@@ -207,6 +206,21 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     @media (max-width: $breakpoint-medium) {
         display: none;
     }
+}
+
+#sr-header-area .sr-bar a {
+    padding: 24px 9px 24px;
+    font-weight: normal;
+}
+
+#sr-more-link, #sr-header-area .dropdown.srdrop .selected {
+    padding: 0px 9px 0px;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+#sr-header-area .dropdown.srdrop {
+    padding-left: 46px;
 }
 
 #sr-header-area .separator {
@@ -217,7 +231,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     background: $header-background-hover;
 }
 
-.morelink, .create .morelink, .c-btn-primary, .wiki-page .wiki-page-content .wiki_button, body .btn, .account-activity-box a {
+.morelink, .create .morelink, .c-btn-primary, .wiki-page .wiki-page-content .wiki_button, body .btn, .account-activity-box a, .titlebox .md h6 a {
     background: $button-background;
     border: $button-border;
     border-color: $button-border-color;
@@ -231,7 +245,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     z-index: 100;
 }
 
-.morelink:hover, .btn:hover, .c-btn-primary:hover, .wiki-page .wiki-page-content .wiki_button, button:hover, .account-activity-box a:hover {
+.morelink:hover, .btn:hover, .c-btn-primary:hover, .wiki-page .wiki-page-content .wiki_button, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover {
     background: $button-background-hover;
     border-color: $button-border-color;
     color: $button-text-color-hover;
@@ -389,6 +403,7 @@ div.titlebox span.number:after {
 }
 
 .titlebox .fancy-toggle-button .option.add {
+    display: block;
     background-image: url(%%playnow%%) !important;
     background-color: transparent;
     box-shadow: unset;
@@ -400,14 +415,53 @@ div.titlebox span.number:after {
     width: 256px;
 }
 
-.titlebox .fancy-toggle-button .option:hover {
+.titlebox .fancy-toggle-button .option.add:hover {
     background-color: transparent !important;
     background-position: -256px -0px !important;
     height: 139px;
     width: 256px;
 }
 
-.titlebox {
+.titlebox .fancy-toggle-button .option.remove {
+    margin-left: 0;
+    position: absolute;
+    top: 38px;
+    right: 240px;
+    background: grey;
+}
+
+.titlebox .fancy-toggle-button .option.remove:hover {
+    background: lightgrey;
+}
+
+
+.titlebox .md h6 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.titlebox .md h6:last-child {
+    margin-bottom: 12px;
+}
+
+.titlebox .md h6 a {
+    padding: 6px 18px;
+}
+
+.titlebox .leavemoderator a, .side .titlebox .tagline a.flairselectbtn {
+    margin: 0;
+    padding: 0;
+    position: unset;
+}
+
+.titlebox .leavemoderator a::selection, .side .titlebox .tagline a.flairselectbtn::selection {
+    background: none;
+}
+.titlebox .leavemoderator a:hover, .side .titlebox .tagline a.flairselectbtn:hover {
+    text-decoration: underline;
+}
+
+.side .spacer .titlebox {
     margin-top: 50px;
 
     &:before {
@@ -434,22 +488,21 @@ div.titlebox span.number:after {
 
 .sidecontentbox {
 
-    .more {
-        margin-bottom: 50px;
-    }
-
     .message-button {
         padding: unset;
 
         &:before {
             content: 'Toon Council';
-            margin: -62px -162px;
+            margin: -62px -22px;
         }
 
         a {
-            margin: 100px 0 0 -144px;
+            /*
+            margin: 50px 0 0 -144px;
             position: absolute;
+            */
             width: 288px;
+            margin-bottom: 12px;
         }
     }
 
@@ -468,7 +521,7 @@ div.titlebox span.number:after {
     margin: unset !important;
 
     .morelink {
-        top: 298px !important;
+        top: 255px !important;
         margin: 16px;
     }
 }
@@ -479,7 +532,7 @@ div.titlebox span.number:after {
     &:before {
         content: 'About';
         font-size: 24px;
-        margin: -50px -20px;
+        margin: -50px -162px;
         position: absolute;
     }
 
@@ -499,6 +552,30 @@ div.titlebox span.number:after {
 }
 
 .res .srSep {
+    display: none;
+}
+
+.linkflairlabel {
+    margin-left: 6px;
+}
+
+.hover-bubble.multi-selector {
+    top: 275px !important;
+    right: 150px !important;
+    z-index: 200;
+}
+
+.hover-bubble.anchor-right:before, .hover-bubble.anchor-right:after {
+    transform: rotate(-90deg);
+    top: -18px;
+    right: 75px;
+}
+
+.flair {
+    color: #FFFFFF;
+}
+
+.flair:before {
     display: none;
 }
 
