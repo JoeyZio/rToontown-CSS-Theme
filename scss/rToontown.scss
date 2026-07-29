@@ -176,7 +176,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 
 #header-img.default-header, #header-img {
     background-color: #015bb4;
-    margin: -72px 0 0 -10px;
+    margin: -74px 0 0 -10px;
     transform: scale(0.75);
 }
 
@@ -221,6 +221,19 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 
 #sr-header-area .dropdown.srdrop {
     padding-left: 46px;
+}
+
+#sr-header-area .drop-choices.srdrop.inuse  {
+    top: 48px !important;
+    left: 48px !important;
+}
+
+#sr-header-area .drop-choices a.choice {
+    color: black !important;
+}
+
+#sr-header-area .drop-choices a.choice:hover {
+    color: #777 !important;
 }
 
 #sr-header-area .separator {
@@ -288,7 +301,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     }
 
     &:after {
-        content: "Subreddit CSS Theme created by /u/JoeyZio. Powered by /r/Naut. Contribute on GitHub!";
+        content: "Subreddit CSS Theme created by /u/JoeyZio. Modified by /u/DarkMetal485. Powered by /r/Naut.";
         border: 0;
         color: #292f34;
         font: 13px/1.45 Lato,Arial,sans-serif;
@@ -465,7 +478,7 @@ div.titlebox span.number:after {
     margin-top: 50px;
 
     &:before {
-        content: 'Toon HQ';
+        content: 'Subreddit Info';
         font-size: 24px;
         margin: -50px -20px;
         position: absolute;
@@ -478,7 +491,7 @@ div.titlebox span.number:after {
 }
 
 .side #moderation_tools .title:before {
-    content: 'Anti-Cog Tools';
+    content: 'Moderation Tools';
     margin: -55px -20px;
 }
 
@@ -492,7 +505,7 @@ div.titlebox span.number:after {
         padding: unset;
 
         &:before {
-            content: 'Toon Council';
+            content: 'Moderators';
             margin: -62px -22px;
         }
 
@@ -521,16 +534,19 @@ div.titlebox span.number:after {
     margin: unset !important;
 
     .morelink {
+        display: none;
+        /*
         top: 255px !important;
         margin: 16px;
+        */
     }
 }
 
 .account-activity-box {
-    height: 175px;
+    height: 75px;
 
     &:before {
-        content: 'About';
+        content: 'Credits';
         font-size: 24px;
         margin: -50px -162px;
         position: absolute;
@@ -539,12 +555,25 @@ div.titlebox span.number:after {
     a {
         display: block;
         font-size: 14px;
+        margin-top: 75px;
     }
 }
 
 .footer-parent {
     background: $body-background url(%%footer%%) no-repeat scroll top center;
     background-size: 75%;
+}
+
+.footer-parent:before {
+    display: block;
+    content: "Are YOU Toon Enough?";
+    color: transparent;
+    height: 101px;
+    width: 100%;
+    background-image: url(%%footerimg%%);
+    background-repeat: no-repeat;
+    background-size: auto 101px;
+    background-position: center center;
 }
 
 #RESShortcutsViewport, #RESShortcutsEditContainer {
