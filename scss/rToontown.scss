@@ -229,11 +229,11 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 }
 
 #sr-header-area .drop-choices a.choice {
-    color: black !important;
+    color: #777 !important;
 }
 
 #sr-header-area .drop-choices a.choice:hover {
-    color: #777 !important;
+    color: black !important;
 }
 
 #sr-header-area .separator {
@@ -334,10 +334,6 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     }
 }
 
-.titlebox h1.redditname {
-    z-index: 1;
-}
-
 .side .titlebox h1.redditname:before {
     margin-top: -149px;
     height: 130px;
@@ -406,6 +402,7 @@ div.titlebox span.number:after {
     content: unset;
 }
 
+/*
 .titlebox .fancy-toggle-button {
     top: 120px !important;
     margin-left: 314px;
@@ -446,11 +443,32 @@ div.titlebox span.number:after {
 .titlebox .fancy-toggle-button .option.remove:hover {
     background: lightgrey;
 }
-
+*/
 
 .titlebox .md h6 {
     text-align: center;
     text-decoration: none;
+}
+
+.titlebox .md h6:first-of-type a {
+    background-image: url(%%playnow%%) !important;
+    background-color: transparent;
+    border: unset;
+    border-radius: unset;
+    box-shadow: unset !important;
+    color: transparent;
+    height: 130px;
+    position: absolute;
+    right: 143px;
+    top: 121px;
+    width: 256px;
+}
+
+.titlebox .md h6:first-of-type a:hover {
+    background-color: transparent !important;
+    background-position: -256px -0px !important;
+    height: 139px;
+    width: 256px;
 }
 
 .titlebox .md h6:last-child {
