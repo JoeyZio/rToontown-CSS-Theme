@@ -126,7 +126,7 @@ select {
     right: -250px;
 }
 
-#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
+#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .side #wikiactions:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
     color: #fff;
     font-weight: bold;
     text-shadow: 3px 3px 0 #1d1d1d, 3px 2px 0 #1d1d1d, 3px 1px 0 #1d1d1d, 3px 0px 0 #1d1d1d, 2px 3px 0 #1d1d1d, 1px 3px 0 #1d1d1d, 0px 3px 0 #1d1d1d, -1px -1px 0 #1d1d1d, -1px 0px 0 #1d1d1d, 0px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, -1px 1px 0 #1d1d1d;
@@ -259,7 +259,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     z-index: 100;
 }
 
-.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover {
+.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover {
     background: $button-background-hover;
     border-color: $button-border-color;
     color: $button-text-color-hover;
@@ -511,6 +511,13 @@ body.search-page .side .spacer .titlebox {
         margin: -50px -20px;
         position: absolute;
     }
+}
+
+.side .spacer #wikiactions:before {
+    content: 'Wiki Tools';
+    font-size: 24px;
+    margin: -50px -20px;
+    position: absolute;
 }
 
 .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
