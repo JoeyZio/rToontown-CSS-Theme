@@ -97,6 +97,10 @@ select {
     height: unset;
 }
 
+#header .user a {
+    vertical-align: middle;
+}
+
 #header .pagename a {
     background-size: auto 140px;
     height: 140px;
