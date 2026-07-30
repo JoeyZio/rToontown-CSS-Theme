@@ -565,10 +565,6 @@ body.search-page #moderation_tools{
         }
 
         a {
-            /*
-            margin: 50px 0 0 -144px;
-            position: absolute;
-            */
             width: 288px;
             margin-bottom: 12px;
         }
@@ -585,6 +581,10 @@ body.search-page #moderation_tools{
 
     li:not(.message-button) {
         margin-bottom: 2px;
+    }
+
+    .author {
+        vertical-align: middle;
     }
 }
 
@@ -638,6 +638,9 @@ body.search-page #moderation_tools{
 
 .linkflairlabel {
     margin-left: 6px;
+    border-radius: 4px;
+    height: fit-content;
+    padding: 2px 6px;
 }
 
 .hover-bubble.multi-selector {
@@ -658,6 +661,9 @@ body.search-page #moderation_tools{
 
 .flair {
     color: #FFFFFF;
+    border-radius: 4px;
+    height: fit-content;
+    padding: 2px 6px;
 }
 
 .content .tagline .flair {
