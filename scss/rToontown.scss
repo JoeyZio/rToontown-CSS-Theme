@@ -286,6 +286,22 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     margin-left: 174px;
 }
 
+.sidebox.submit.disabled .morelink {
+    margin-left: 60px;
+    width: 200px;
+    box-shadow: 0 3px #b2b2b2 !important;
+}
+
+.sidebox.submit.disabled .morelink:hover {
+    background: rgba(0, 0, 0, 0.08);
+    cursor: not-allowed;
+}
+
+.sidebox.submit.disabled .morelink a, .sidebox.submit.disabled .morelink a:hover {
+    color: black !important;
+    cursor: not-allowed;
+}
+
 .submit-link .morelink:after, .submit-text .morelink:before {
     content: unset;
 }
