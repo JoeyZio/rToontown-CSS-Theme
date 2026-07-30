@@ -566,6 +566,10 @@ body.search-page #moderation_tools{
     .title h1 {
         display: none;
     }
+
+    li:not(.message-button) {
+        margin-bottom: 2px;
+    }
 }
 
 .sidebox.create {
