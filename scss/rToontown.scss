@@ -59,6 +59,8 @@ body {
     background-size: 75%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0 32px;
+    position: relative;
+    min-width: 1140px;
 
     @media (min-width: $breakpoint-medium) {
         padding: 0 64px;
@@ -124,7 +126,7 @@ select {
     right: -250px;
 }
 
-#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before, .account-activity-box:before {
+#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
     color: #fff;
     font-weight: bold;
     text-shadow: 3px 3px 0 #1d1d1d, 3px 2px 0 #1d1d1d, 3px 1px 0 #1d1d1d, 3px 0px 0 #1d1d1d, 2px 3px 0 #1d1d1d, 1px 3px 0 #1d1d1d, 0px 3px 0 #1d1d1d, -1px -1px 0 #1d1d1d, -1px 0px 0 #1d1d1d, 0px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, -1px 1px 0 #1d1d1d;
@@ -167,7 +169,7 @@ body[class]>.content, body.listing-page[class]>.content {
     padding: 145px 384px 64px 32px;
 }
 
-body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .comment-visits-box, .comments-page .link, .commentarea>.sitetable>.comment, .comments-page .side .linkinfo, #bottom-comments:not(.child)>.sitetable>.comment, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .account-activity-box, .side .sidecontentbox, .side .titlebox, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-page .searchpane, .search-result-subreddit, .search-result-listing, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before {
+body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .comment-visits-box, .commentarea>.sitetable>.comment, .comments-page .side .linkinfo, #bottom-comments:not(.child)>.sitetable>.comment, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .side .sidecontentbox, .side .titlebox, .side:after, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-page .searchpane, .search-result-subreddit, .search-result-listing, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before, .account-activity-box, .subreddit-rules-page, #siteTable {
     border-radius: 10px;
     border: 2px solid #D4D4D4;
     background: #FFF;
@@ -301,11 +303,11 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
 
     &:after {
         content: "Subreddit CSS Theme created by /u/JoeyZio. Modified by /u/DarkMetal485. Powered by /r/Naut.";
-        border: 0;
+        /* border: 0; */
         color: #292f34;
         font: 13px/1.45 Lato,Arial,sans-serif;
-        margin-top: -120px;
-        padding: 16px;
+        margin-top: -25px;
+        padding: 14px;
     }
 
     .spacer {
@@ -452,9 +454,17 @@ div.titlebox span.number:after {
     font-size: 0;
     height: 130px;
     position: absolute;
-    right: 143px;
+    right: 50px;
     top: 121px;
     width: 256px;
+
+    @media (min-width: $breakpoint-medium) {
+        right: 80px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        right: 143px;
+    }
 }
 
 .titlebox .md h6:first-of-type a:hover {
@@ -489,9 +499,12 @@ body.search-page .side .spacer .titlebox {
     margin-top: 20px !important;
 }
 
-.side .spacer .titlebox {
-    margin-top: 50px !important;
+.loggedin .side .spacer .titlebox, .listing-page .side .spacer .titlebox {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
+.side .spacer .titlebox {
     &:before {
         content: 'Subreddit Info';
         font-size: 24px;
@@ -506,7 +519,7 @@ body.search-page .side .spacer .titlebox {
 }
 
 body.search-page #moderation_tools{
-        margin-top: 50px;
+    margin-top: 50px;
 }
 
 .side #moderation_tools .title:before {
@@ -561,21 +574,14 @@ body.search-page #moderation_tools{
     }
 }
 
-.account-activity-box {
-    height: 75px;
+.side .spacer .account-activity-box {
+    margin-top: -25px;
+}
 
-    &:before {
-        content: 'Credits';
-        font-size: 24px;
-        margin: -50px -162px;
-        position: absolute;
-    }
-
-    a {
-        display: block;
-        font-size: 14px;
-        margin-top: 75px;
-    }
+.side .account-activity-box a {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
 }
 
 .footer-parent {
@@ -619,17 +625,22 @@ body.search-page #moderation_tools{
     right: 75px;
 }
 
-.flair {
-    color: #FFFFFF;
-}
-
 .flair:before {
     display: none;
 }
 
+.flair {
+    color: #FFFFFF;
+}
+
+#siteTable .flair {
+    margin-left: 4px;
+}
+
 .search-page .searchpane {
     height: 105px;
-    width: 700px;
+    width: 630px;
+    margin-left: auto;
 }
 
 .search-page .searchpane #previoussearch #search {
@@ -642,10 +653,40 @@ body.search-page #moderation_tools{
 
     label {
         margin-left: 375px;
+        width: 250px;
         box-shadow: unset;
         border: 1px solid #d4d4d4;
     }
 }
+
+.search-page .searchpane .search-submit-button {
+    box-shadow: unset !important;
+
+    &:hover {
+        background: rgba(158, 158, 158, .2) url(%%spritesheet%%) -64px -97px no-repeat;
+    }
+}
+
+.search-page .searchpane #previoussearch #moresearchinfo {
+    margin-left: 28px;
+    margin-top: -24px;
+    width: 320px;
+}
+
+.search-page .searchpane #previoussearch #search_showmore {
+    background: unset;
+    top: 42px;
+    left: 30px;
+    width: unset;
+    font-size: unset;
+    color: black;
+
+    &:hover {
+        text-decoration: underline;
+        color: #2178fd;
+    }
+}
+
 
 .search-result-listing:before {
     content: "Search Results";
@@ -694,6 +735,53 @@ body.search-page #moderation_tools{
 #preview-table>table {
     background-color: white;
     width: auto;
+}
+
+.subreddit-rules-page {
+    max-width: unset;
+
+    &:before {
+        top: 12px;
+        left: 16px;
+    }
+
+    .md-container {
+        margin-left: 12px;
+    }
+
+    #subreddit-rule-list {
+        max-width: unset;
+    }
+}
+
+.menuarea {
+    a {
+        color: black;
+    }
+    
+    a:hover {
+        color: #2178fd;
+        text-decoration: underline;
+    }
+
+    .dropdown-title {
+        color: black !important;
+    }
+
+    .dropdown .selected {
+        color: black !important;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .dropdown .selected:hover {
+        color: #2178fd !important;
+        text-decoration: underline;
+    }
+
+    .drop-choices a:hover {
+        color: black !important;
+    }  
 }
 
 /* Comments Page */
