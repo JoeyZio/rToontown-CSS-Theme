@@ -126,7 +126,7 @@ select {
     right: -250px;
 }
 
-#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .side #wikiactions:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
+#header .tabmenu li a, .titlebox span.subscribers, .titlebox:before, .search-result-listing:before, .comments-page .commentarea .panestack-title .title, .side #moderation_tools .title:before, .side #wikiactions .title:before, .sidecontentbox .message-button:before, .sidecontentbox .gadget:before {
     color: #fff;
     font-weight: bold;
     text-shadow: 3px 3px 0 #1d1d1d, 3px 2px 0 #1d1d1d, 3px 1px 0 #1d1d1d, 3px 0px 0 #1d1d1d, 2px 3px 0 #1d1d1d, 1px 3px 0 #1d1d1d, 0px 3px 0 #1d1d1d, -1px -1px 0 #1d1d1d, -1px 0px 0 #1d1d1d, 0px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, 1px -1px 0 #1d1d1d, -1px 1px 0 #1d1d1d;
@@ -513,7 +513,7 @@ body.search-page .side .spacer .titlebox {
     }
 }
 
-.side .spacer #wikiactions:before {
+.side .spacer #wikiaction .title:before {
     content: 'Wiki Tools';
     font-size: 24px;
     margin: -50px -20px;
