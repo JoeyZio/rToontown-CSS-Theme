@@ -246,7 +246,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     background: $header-background-hover;
 }
 
-.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a {
+.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a, .content .create-reddit button, .content .stylesheet-customize-container button {
     background: $button-background;
     border: $button-border;
     border-color: $button-border-color;
@@ -259,7 +259,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     z-index: 100;
 }
 
-.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover {
+.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover, .content .create-reddit button:hover, .stylesheet-customize-container button:hover {
     background: $button-background-hover;
     border-color: $button-border-color;
     color: $button-text-color-hover;
@@ -789,6 +789,10 @@ body.search-page #moderation_tools{
     .drop-choices a:hover {
         color: black !important;
     }  
+}
+
+.content .create-reddit .linefield {
+    width: 100%;
 }
 
 /* Comments Page */
