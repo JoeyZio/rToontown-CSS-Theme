@@ -246,7 +246,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     background: $header-background-hover;
 }
 
-.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a, .content .create-reddit button, .content .stylesheet-customize-container button {
+.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a, .content .create-reddit button, .content .stylesheet-customize-container button, .submit-page button {
     background: $button-background;
     border: $button-border;
     border-color: $button-border-color;
@@ -259,7 +259,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     z-index: 100;
 }
 
-.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover, .content .create-reddit button:hover, .stylesheet-customize-container button:hover {
+.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover, .content .create-reddit button:hover, .stylesheet-customize-container button:hover, .submit-page button:hover {
     background: $button-background-hover;
     border-color: $button-border-color;
     color: $button-text-color-hover;
@@ -794,6 +794,86 @@ body.search-page #moderation_tools{
 .content .create-reddit .linefield {
     width: 100%;
 }
+
+/* Submit Link & Text Pages */
+.submit-page #header #header-bottom-left {
+    width: 100%;
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    margin-left: unset;
+
+    #header-img {
+        position: relative;
+        margin-left: 6px;
+        top: 30px;
+    }
+
+    .redditname {
+        display: block;
+        width: 100%;
+        
+        a {
+            display: block;
+            margin: -10px auto 0 auto;    
+        }
+    }
+}
+
+.submit-page[class] div.content {
+    padding: 16px;
+    margin-top: 60px;
+    width: 555px;
+
+    #newlink.submit {
+        width: 100%;
+
+        .tabmenu {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .formtabs-content {
+        width: 100%
+    }
+    
+    .roundfield {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #text-field .bottom-area {
+        width: 492px;
+    }
+
+    #items-required {
+        width: 524px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+    #newlink.submit.content button.btn[type="submit"] {
+        display: block;
+        width: 524px;
+        margin: 12px auto 0 auto;
+        font: unset;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .submit_text {
+        border: none;
+        background-color: #edf1f3;
+        
+        p {
+            color: black;
+        }
+    }
+}
+
 
 /* Comments Page */
 .comments-page .side .linkinfo{
