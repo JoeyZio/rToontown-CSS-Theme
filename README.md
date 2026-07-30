@@ -1,6 +1,6 @@
 # ![Disney's Toontown on reddit](https://i.imgur.com/3tl6gjF.png)
 
-This repository contains a Toontown Online inspired CSS theme built for [/r/Toontown](https://reddit.com/r/Toontown) on reddit. This theme is an addon for [Naut](https://github.com/Axel--/Naut-for-reddit), and is built with assets from the Toontown Online website.
+This repository contains a Toontown Online inspired CSS theme built for [/r/Toontown](https://reddit.com/r/Toontown) on Reddit. This theme is an addon for [Naut](https://github.com/Axel--/Naut-for-reddit), and is built with assets from the Toontown Online website.
 
 ## Installation
 
