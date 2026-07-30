@@ -169,7 +169,7 @@ body[class]>.content, body.listing-page[class]>.content {
     padding: 145px 384px 64px 32px;
 }
 
-body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .comment-visits-box, .commentarea>.sitetable>.comment, .comments-page .side .linkinfo, #bottom-comments:not(.child)>.sitetable>.comment, .commentarea .usertext .markhelp, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .side .sidecontentbox, .side .titlebox, .side:after, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-page .searchpane, .search-result-subreddit, .search-result-listing, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before, .account-activity-box, .subreddit-rules-page, #siteTable {
+body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .comments-page .comment-visits-box, .commentarea>.sitetable>.comment, .comments-page .side .linkinfo, #bottom-comments:not(.child)>.sitetable>.comment, .commentarea .usertext .markhelp, #images, .sponsorshipbox, .stylesheet-customize-container .pretty-form, .side .sidecontentbox, .side .titlebox, .side:after, #previoussearch #moresearchinfo, #ad-frame, #ad_main, .wiki-page .wiki-page-content, .linefield, .submit-page .roundfield, .login-form-side, #ad_main_top, .search-page .searchpane, .search-result-subreddit, .search-result-listing, .search-result-listing+.search-result-listing .contents, [class] .searchfacets, .side .titlebox h1.redditname:before, .account-activity-box, .subreddit-rules-page, #siteTable, .usertable {
     border-radius: 10px;
     border: 2px solid #D4D4D4;
     background: #FFF;
@@ -246,7 +246,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     background: $header-background-hover;
 }
 
-.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a, .content .create-reddit button, .content .stylesheet-customize-container button, .submit-page button {
+.morelink, .create .morelink, .c-btn-primary, .usertext-buttons button, .comments-page .comment-visits-box a, .wiki-page .wiki-page-content .wiki_button, body .btn a, .account-activity-box a, .titlebox .md h6 a, .content .create-reddit button, .content .stylesheet-customize-container button, .submit-page button, .flair-settings button, .flairlist button {
     background: $button-background;
     border: $button-border;
     border-color: $button-border-color;
@@ -259,7 +259,7 @@ body.listing-page>.content>.sitetable, body.other-discussions-page>.content, .co
     z-index: 100;
 }
 
-.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover, .content .create-reddit button:hover, .stylesheet-customize-container button:hover, .submit-page button:hover {
+.morelink:hover, .btn:hover, .c-btn-primary:hover, .usertext-buttons button:hover, .comments-page .comment-visits-box a:hover, .wiki-page .wiki-page-content .wiki_button:hover, body .btn a:hover, button:hover, .account-activity-box a:hover, .titlebox .md h6 a:hover, .content .create-reddit button:hover, .stylesheet-customize-container button:hover, .submit-page button:hover, .flair-settings button:hover, .flairlist button:hover {
     background: $button-background-hover;
     border-color: $button-border-color;
     color: $button-text-color-hover;
@@ -793,6 +793,26 @@ body.search-page #moderation_tools{
 
 .content .create-reddit .linefield {
     width: 100%;
+}
+
+.content .flair-settings {
+    min-width: 832px;
+}
+
+.content .tabmenu {
+    background-color: lightgrey;
+
+    a {
+        color: black
+    }
+
+    a:hover {
+        color: #24a0ed;
+    }
+}
+
+.content .usertable {
+    width: 832px;
 }
 
 /* Submit Link & Text Pages */
