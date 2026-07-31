@@ -648,15 +648,18 @@ body.search-page #moderation_tools{
 }
 
 .hover-bubble.multi-selector {
-    top: 275px !important;
-    right: 150px !important;
+    top: 476px !important;
+    /*right: 408px !important;*/
+    right: 376px !important;
     z-index: 200;
-}
 
-.hover-bubble.anchor-right:before, .hover-bubble.anchor-right:after {
-    transform: rotate(-90deg);
-    top: -18px;
-    right: 75px;
+    @media (min-width: $breakpoint-medium) {
+        right: 408px !important;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        right: 472px !important;
+    }
 }
 
 .flair:before {
