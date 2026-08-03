@@ -1,8 +1,8 @@
 {
   "name": "rtoontown-css-theme",
-  "description": "A Toontown Online inspired CSS theme for /r/Toontown on reddit.",
+  "description": "A Toontown Online inspired CSS theme for /r/Toontown on Reddit.",
   "version": "0.1.0",
-  "author": "Joey Ziolkowski",
+  "author": "Joey Ziolkowski, Alexander Turner",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
